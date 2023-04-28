@@ -1,0 +1,14 @@
+ - name: Test playbook - ansible register
+   hosts: all
+   gather_facts: False
+   become: True
+   tasks:
+    - name: First Task - Using shell module to check if virtualenv is present or not
+      ansible.builtin.shell:
+        cmd: which virtualenv 
+      register: virtualenv_output
+      ignore_errors: True
+
+    - name: Second Task - Print the full output
+      ansible.builtin.debug:
+        var: virtualenv_outpu
