@@ -1,0 +1,14 @@
+- name: test
+  hosts: all
+  become: true
+  tasks:
+    - debug:
+        msg: "private ip is {{ foo }}"
+    - debug:
+        msg: "instance_id is {{ boo }}"
+    - debug:
+        msg: "my key pem is {{ key }}"
+    - debug:
+        msg: "host is {{ ansible_host }}"
+    - debug:
+        msg: "my key pem is {{ key }}"

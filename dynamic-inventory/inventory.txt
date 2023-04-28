@@ -1,0 +1,4 @@
+[webservers]
+node1 ansible_host=172.31.91.133 ansible_ssh_private_key_file=/home/ec2-user/oslo.pem ansible_user=ec2-user
+[dbservers]
+node2 ansible_host=172.31.88.192 ansible_ssh_private_key_file=/home/ec2-user/oslo.pem ansible_user=ec2-user

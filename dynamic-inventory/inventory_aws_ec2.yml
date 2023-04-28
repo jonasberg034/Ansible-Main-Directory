@@ -1,0 +1,15 @@
+plugin: amazon.aws.aws_ec2
+regions:
+ - us-east-1
+filters:
+  instance-state-name: running
+  tag:environment: dev
+keyed_groups:
+  - prefix: merhaba
+    separator: "lar"
+    key: tags.environment
+compose:
+  ansible_host: public_ip_address
+  foo: private_ip_address
+  boo: instance_id
+  key: key_name
