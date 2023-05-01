@@ -1,0 +1,3 @@
+PROJE ILE ILGILI
+
+Ping atinca hata verdi. ansible.config dosyasinda key_file kenfi key.file.pem dosyami atmam lazim.
