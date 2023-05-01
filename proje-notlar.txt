@@ -9,9 +9,18 @@ Iki dosya olusutur. Ansible ve Ansible project.
 Ansible da config ve inventory dosyasi olusuturman yeterli.
 ansible-project dosyasini olusutur. uc alt dosya olusutur postgres, nodejs, react student files tan init.sql file kopyala ansible-project postgres dosyasina kopyala.
 Postgres dizinindeyim. Dockerfile adinda bir dosya olusturve icerik yaz. Boylelikle iki adet dosya postgres dizinin altinda olustur. Dockerhub a git ve postgres arat. baska bir sey arat. initdb. diye arat bu sefer de. Dockerfile da olusturdgumuz COPY nin yaninda yazan komutu burada bulduk. COPY ./init.sql /docker-entrypoint-initdb.d/ (bunu) Database baslangicta hazir olmus olacak.
-ansible dizinine gel. Playbook yazmaya baslayacagiz.
+ansible dizinine gel. Playbook yazmaya baslayacagiz. Bu playbook centos da docker install icin.
 code docker_postgre.yml olustur. Bu docker install edecek. instal ldocker google ve oradan yandan centos olani sec
 Simdi yaml dosyasini yaziyoruz. Ilk once update ile ilgili olan yaziyoruz. Ansible yum module, yum repository modulu veya get.url modulu, package,  
 
 ansible-vault create secret.yml  --> password: Pp123456789
 ansible-playbook --ask-vault-pass docker_postgre.yml
+Database tamamlandi.
+
+Nodejs e gectik.
+Student files --> todo-appp-pern --> server dosyasi altindaki dosayalari ansible-project --> nodejs dizinine kopyala. Bu dizinde dockerfile olustur. env dosyasi altinda DB_HOST= database instance private Ip sini yapisitir.
+Ansible dizinine geri gel. dokcekr icin yaml dosyasi olusutur ve calistir. ansiblenodejs instanceipadresine:5000:todos yaz ekrana iki adet parantez gelecek
+
+React dizinine geldik. todo altindaki client altindakileri react dizinine gonder.
+env dosyasini degistir. docker ivcin palybook.yaml olustur. burada public ip adresini al. boyle yazmis developer cunku. 
+
