@@ -1,0 +1,5 @@
+ansible-playbook ping-playbook.yaml
+ansible all -m ping 
+ansible-inventory -i inventory_aws_ec2.yml --graph
+ansible-vault create secret.yml
+ansible-playbook --ask-vault-pass docker_postgre.yml
