@@ -1,3 +1,17 @@
 PROJE ILE ILGILI
 
-Ping atinca hata verdi. ansible.config dosyasinda key_file kenfi key.file.pem dosyami atmam lazim.
+Ping atinca hata verdi. ansible.config dosyasinda key_file kendi key.file.pem dosyami atamam lazim.
+Genel olarak docker olusutr.
+student files ' i ilgili dosyadan home/ec2-user altinakopyala
+ansible.cfg olustur ve kendi pem file'ini ata
+inventory.yaml dosyani olustur.cfg dosya da inventory=inventory_aws_ec2.yml oldugunu kontrol et.
+Iki dosya olusutur. Ansible ve Ansible project.
+Ansible da config ve inventory dosyasi olusuturman yeterli.
+ansible-project dosyasini olusutur. uc alt dosya olusutur postgres, nodejs, react student files tan init.sql file kopyala ansible-project postgres dosyasina kopyala.
+Postgres dizinindeyim. Dockerfile adinda bir dosya olusturve icerik yaz. Boylelikle iki adet dosya postgres dizinin altinda olustur. Dockerhub a git ve postgres arat. baska bir sey arat. initdb. diye arat bu sefer de. Dockerfile da olusturdgumuz COPY nin yaninda yazan komutu burada bulduk. COPY ./init.sql /docker-entrypoint-initdb.d/ (bunu) Database baslangicta hazir olmus olacak.
+ansible dizinine gel. Playbook yazmaya baslayacagiz.
+code docker_postgre.yml olustur. Bu docker install edecek. instal ldocker google ve oradan yandan centos olani sec
+Simdi yaml dosyasini yaziyoruz. Ilk once update ile ilgili olan yaziyoruz. Ansible yum module, yum repository modulu veya get.url modulu, package,  
+
+ansible-vault create secret.yml  --> password: Pp123456789
+ansible-playbook --ask-vault-pass docker_postgre.yml
